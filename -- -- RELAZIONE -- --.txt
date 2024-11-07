@@ -1,0 +1,23 @@
+-- -- RELAZIONE -- --
+
+COMUNICAZIONE SU RETE DIVERSA
+IP laptop1: 192.168.100.100
+IP laptop2: 192.168.200.100
+
+1) Laptop 1 invia un messaggio broadcast di ARP Request per conoscere l'indirizzo MAC del router
+2) Una volta ricevuto il messaggio di ARP Reply, Laptop 1 invia il pacchetto allo switch 1 che nella tabella ha l'indirizzo MAC di destinazione del router
+3) Lo switch 1 invia il pacchetto al router
+4) Il router ora per inviare il pacchetto al Laptop 2 deve conoscere l'indirizzo MAC di quest'ultimo quindi manda un messaggio broadcast di ARP Request
+5) Il router ottiene un ARP Reply quindi il pacchetto viene spedito allo Switch 2
+6) Lo Switch 2 invia il pacchetto a Laptop 2
+
+--------------------------------------------------------------
+
+COMUNICAZION SULLA STESSA RETE
+IP laptop1: 192.168.100.100
+IP PC: 192.168.100.103
+
+1) Laptop 1 invia un messaggio broadcast di ARP Request per conoscere l'indirizzo MAC del PC
+2) Laptop 1 riceve l'ARP Reply quindi invia il pacchetto allo Switch 1
+3) Switch 1 invia il pacchetto al PC (192.168.100.103)
+ 
